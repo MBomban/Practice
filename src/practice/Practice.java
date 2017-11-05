@@ -1,11 +1,13 @@
 
 package practice;
 
+import java.util.ArrayList;
+
 public class Practice{
     
     public static int[] arr = new int[2]; 
     public static int[] a =  {32,51,63,23,86,14,86,12,64, 73};
-    public static int[] b = a; 
+    public static int[] b;
     public static void main(String[] args) {
         
 //        print_hello_world(); 
@@ -16,15 +18,26 @@ public class Practice{
 //        a=arr[0];
 //        b=arr[1];
 //        System.out.println(" a = " + a + " b = " + b);
-        print_array(a);
-        System.out.println("\n");
-    int[] temp_arr = bubble_sort(a); 
-      print_array(temp_arr); 
-         System.out.println("\n");
-          print_array(b);
-        System.out.println("\n");
+//        print_array(a);
+//        System.out.println("\n");
+//    int[] temp_arr = bubble_sort(a); 
+//      print_array(temp_arr); 
+//         System.out.println("\n");
+//          print_array(b);
+//        System.out.println("\n");
        //temp_arr = insertion_sort(a); 
       // print_array(temp_arr); 
+      print_array(a);
+      System.out.println("\n");
+       int[] b = (int[])a.clone();
+      print_array(b);
+      System.out.println("\n");
+      a[0]=10;
+      print_array(b);
+      
+      
+      
+      
         
         
     }
