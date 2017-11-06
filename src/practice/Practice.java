@@ -1,47 +1,53 @@
 
 package practice;
 
-import java.util.ArrayList;
-
 public class Practice{
     
     public static int[] arr = new int[2]; 
     public static int[] a =  {32,51,63,23,86,14,86,12,64, 73};
     public static int[] b;
+    
+    
     public static void main(String[] args) {
         
-//        print_hello_world(); 
-//        int a = 10;
-//        int b =4; 
-//        System.out.println(" a = " + a + " b = " + b + "\n Swapped");
-//        swap(a,b);
-//        a=arr[0];
-//        b=arr[1];
-//        System.out.println(" a = " + a + " b = " + b);
-//        print_array(a);
-//        System.out.println("\n");
-//    int[] temp_arr = bubble_sort(a); 
-//      print_array(temp_arr); 
-//         System.out.println("\n");
-//          print_array(b);
-//        System.out.println("\n");
-       //temp_arr = insertion_sort(a); 
-      // print_array(temp_arr); 
-      print_array(a);
-      System.out.println("\n");
-       int[] b = (int[])a.clone();
-      print_array(b);
-      System.out.println("\n");
-      a[0]=10;
-      print_array(b);
+//        test_print_hello_world();
+//        test_swap();
+//        test_bubble_sort();
+//        test_insertion_sort();
       
-      
-      
-      
-        
-        
     }
     
+    public static void test_print_hello_world(){
+        print_hello_world(); 
+    }
+    
+    public static void test_swap(){
+        int a = 10;
+        int b =4; 
+        System.out.println(" a = " + a + " b = " + b + "\n Swapped");
+        swap(a,b);
+        a=arr[0];
+        b=arr[1];
+        System.out.println(" a = " + a + " b = " + b);
+    }
+    
+    public static void test_bubble_sort(){
+        System.out.println("Bubble Sort:");
+        int[] b = (int[])a.clone();
+        print_array(b);
+        System.out.println("\nSorted");  
+        bubble_sort(b);
+        print_array(b);
+    }
+    
+    public static void test_insertion_sort(){
+        System.out.println("Insertion Sort:");
+        int[] c = (int[])a.clone();
+        print_array(c);
+        System.out.println("\nSorted");  
+        insertion_sort(c);
+        print_array(c);
+    }
     
     public static void print_hello_world(){
         System.out.println("Hello World");
@@ -54,7 +60,6 @@ public class Practice{
         int temp = arr[0];
         arr[0]=arr[1];
         arr[1]=temp; 
-        
     }
     
     public static void print_array(int[] array){
@@ -62,9 +67,7 @@ public class Practice{
         for(int i=0;i<10;i++){
             System.out.print(array[i] + " ,");
         }
-            
     }
-    
     
     public static int[] bubble_sort(int[] array){
         int[] result = array;
@@ -83,20 +86,16 @@ public class Practice{
     
     public static int[] insertion_sort(int[] array){
         int[] result = array; 
-        
-        for ( int j =0; j<result.length-1; j++){
-            for(int i = j; i>0;i--){
-                if(result[i+1] < result[i]){
-                    int num = result[i+1];
-                    result[i+1] = result[i];
-                    result[i] = num;
-                }
+        int n = result.length;
+        for ( int j =1; j<n; ++j){
+            int key = result[j];
+            int i = j-1;
+            while( i >=0 && result[i]>key){
+                result[i+1] = result[i];
+                i = i-1;
             }
+            result[i+1] = key;
         }
         return result;
     }
-    
-    
-    
-    
 }
