@@ -17,8 +17,6 @@ public class Practice{
       
     }
     
-    
-    
     public static void test_print_hello_world(){
         print_hello_world(); 
     }
