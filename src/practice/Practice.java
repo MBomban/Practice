@@ -14,9 +14,26 @@ public class Practice{
 //        test_swap();
 //        test_bubble_sort();
 //        test_insertion_sort();
+
+//        class_b b = new class_b();
+//        b.print_words(); 
+
+int[] arr = {2, 0, 1, 3};
+for (int el : arr) {
+    System.out.println(el);
+}
+
       
     }
-     
+    
+    public static void class_b_m1(){
+        
+        
+        
+    }
+    
+    
+      
     public static void test_print_hello_world(){
         print_hello_world(); 
     }
