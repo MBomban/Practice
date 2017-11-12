@@ -18,10 +18,10 @@ public class Practice{
 //        class_b b = new class_b();
 //        b.print_words(); 
 
-int[] arr = {2, 0, 1, 3};
-for (int el : arr) {
-    System.out.println(el);
-}
+    int[] arr = {2, 0, 1, 3};
+    for (int el : arr) {
+        System.out.println(el);
+    }
 
       
     }
